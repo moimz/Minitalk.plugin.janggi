@@ -14,6 +14,8 @@ if (Minitalk === undefined) return;
 /**
  * 장기대전 객체를 정의한다.
  */
+me.timelimit = 300; // 대국시간(초)
+me.timecount = 3; // 초읽기 기회
 me.game = {
 	minitalk:null,
 	step:0,
@@ -27,8 +29,8 @@ me.game = {
 	status:{
 		turn:"cho", // 초나라가 먼저 시작한다.
 		stones:null,
-		han:{user:null,position:-1,data:null,timer:70,timecount:3,timecounting:false,connected:false}, // 한나라 대국상태
-		cho:{user:null,position:-1,data:null,timer:70,timecount:3,timecounting:false,connected:false} // 초나라 대국상태
+		han:{user:null,position:-1,data:null,timer:me.timelimit,timecount:me.timecount,timecounting:false,connected:false}, // 한나라 대국상태
+		cho:{user:null,position:-1,data:null,timer:me.timelimit,timecount:me.timecount,timecounting:false,connected:false} // 초나라 대국상태
 	},
 	/**
 	 * 대국을 초기화한다.
@@ -234,8 +236,8 @@ me.game = {
 					me.game.status = {
 						turn:"cho", // 초나라가 먼저 시작한다.
 						stones:null,
-						han:{user:null,position:-1,data:null,timer:70,timecount:3,timecounting:false,connected:false}, // 한나라 대국상태
-						cho:{user:null,position:-1,data:null,timer:70,timecount:3,timecounting:false,connected:false} // 초나라 대국상태
+						han:{user:null,position:-1,data:null,timer:me.timelimit,timecount:me.timecount,timecounting:false,connected:false}, // 한나라 대국상태
+						cho:{user:null,position:-1,data:null,timer:me.timelimit,timecount:me.timecount,timecounting:false,connected:false} // 초나라 대국상태
 					};
 					
 					me.game.step = 1;
@@ -2238,20 +2240,6 @@ Minitalk.on("init",function(minitalk) {
 		
 		html = html.join("");
 		minitalk.box.addType("janggi",me.getText("text/title"),1100,700,html);
-		
-		minitalk.on("connect",function(minitalk) {
-			if (minitalk.user.me.level == 9) {
-				var box = {};
-				box.mode = "create";
-				box.title = "장기두자";
-				box.type = "janggi";
-				box.password = null;
-				box.closemode = "owner";
-				box.html = Minitalk.box.types["janggi"].html;
-			
-				Minitalk.box.open(box);
-			}
-		});
 	}
 	
 	/**

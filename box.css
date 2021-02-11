@@ -343,6 +343,17 @@ div[data-role=frame] > main > section[data-role=chat] > div[data-role=line] > di
 
 
 /**
+ * 유저섹션
+ */
+div[data-role=frame] > main > section[data-role=users] {display:none;}
+
+/**
+ * 유저섹션 (v6)
+ */
+div[data-role=frame][data-users=TRUE] > main > section[data-role=users] {display:none;}
+
+
+/**
  * 유저메뉴
  */
 ul[data-role=usermenus] {border-radius:3px; box-shadow:1px 1px 2px rgba(0,0,0,0.1); border:1px solid #444; background:#777;}
