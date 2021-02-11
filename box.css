@@ -1,0 +1,387 @@
+/**
+ * 이 파일은 미니톡 클라이언트 장기 플러그인의 일부입니다. (https://www.minitalk.io)
+ *
+ * 장기플러그인을 이용한 박스 스타일시트를 정의한다.
+ * 
+ * @file /plugins/janggi/box.css
+ * @author Arzz (arzz@arzz.com)
+ * @license MIT License
+ * @version 1.0.0
+ * @modified 2021. 2. 5.
+ */
+body {background:#474440; overflow:hidden;}
+div[data-role=janggi] {border:1px solid #25221f; margin:-1px; width:1100px; height:700px; position:absolute; top:calc(50% - 350px); left:calc(50% - 550px); font-size:0;}
+
+
+/**
+ * 게임 확인창
+ */
+div[data-role=janggi] > div[data-role=confirm] {position:absolute; width:100%; height:100%; background:rgba(0,0,0,0.3); display:table; z-index:50; top:0; left:0;}
+div[data-role=janggi] > div[data-role=confirm] > div {display:table-cell; width:100%; height:100%; vertical-align:middle; text-align:center;}
+div[data-role=janggi] > div[data-role=confirm] > div > div[data-role=box] {width:400px; min-height:100px; box-sizing:border-box; display:inline-block; background:#865e2f; border:2px solid #a17239; border-radius:5px; box-shadow:1px 1px 3px rgba(0,0,0,0.5); text-align:left; padding:8px; position:relative;}
+div[data-role=janggi] > div[data-role=confirm] > div > div[data-role=box] > h4 {width:100%; height:32px; line-height:32px; font-size:14px; font-weight:bold; text-shadow:1px 1px 1px rgba(0,0,0,0.5); color:#fff; box-sizing:border-box; padding:0px 8px; margin-bottom:8px;}
+div[data-role=janggi] > div[data-role=confirm] > div > div[data-role=box] > p {display:block; width:100%; background:#714e28; padding:16px; box-sizing:border-box; border-radius:5px; box-shadow:inset 2px 2px 2px rgba(0,0,0,0.3); font-size:12px; color:#f5d9b8; line-height:1.6;}
+
+div[data-role=janggi] > div[data-role=confirm] > div > div[data-role=box] > div[data-role=position] {width:100%; background:#714e28; padding:8px; box-sizing:border-box; border-radius:5px; box-shadow:inset 2px 2px 2px rgba(0,0,0,0.3); font-size:0; text-align:center;}
+
+div[data-role=janggi] > div[data-role=confirm] > div > div[data-role=box] > div[data-role=position] > button {width:177px; height:52px; background-repeat:no-repeat; cursor:pointer; box-sizing:content-box; border:2px solid transparent; background:transparent; border-radius:5px;}
+div[data-role=janggi] > div[data-role=confirm] > div > div[data-role=box] > div[data-role=position] > button.selected {border-color:#550000 !important; background-color:#a57946;}
+div[data-role=janggi] > div[data-role=confirm] > div > div[data-role=box] > div[data-role=position] > button:hover {background-color:#a57946; border-color:#714e28;}
+div[data-role=janggi] > div[data-role=confirm] > div > div[data-role=box] > div[data-role=position].han > button {background-image:url(./images/position_han.png);}
+div[data-role=janggi] > div[data-role=confirm] > div > div[data-role=box] > div[data-role=position].cho > button {background-image:url(./images/position_cho.png);}
+div[data-role=janggi] > div[data-role=confirm] > div > div[data-role=box] > div[data-role=position] > button:nth-child(1) {background-position:0 0;}
+div[data-role=janggi] > div[data-role=confirm] > div > div[data-role=box] > div[data-role=position] > button:nth-child(2) {background-position:-177px 0;}
+div[data-role=janggi] > div[data-role=confirm] > div > div[data-role=box] > div[data-role=position] > button:nth-child(3) {background-position:0 -52px;}
+div[data-role=janggi] > div[data-role=confirm] > div > div[data-role=box] > div[data-role=position] > button:nth-child(4) {background-position:-177px -52px;}
+div[data-role=janggi] > div[data-role=confirm] > div > div[data-role=box] > div[data-role=buttons] {text-align:right; font-size:0; margin-top:8px;}
+div[data-role=janggi] > div[data-role=confirm] > div > div[data-role=box] > div[data-role=buttons] > button {height:30px; margin-left:5px; border:1px solid rgba(0,0,0,0.8); border-radius:3px; background:#613927; background:linear-gradient(to bottom,#7b4a31 0%,#4d2a1c 100%); box-shadow:inset 2px 2px 2px rgba(255,255,255,0.15), 1px 1px 2px rgba(255,255,255,0.15); color:#fff; font-weight:bold; text-shadow:1px 1px 2px rgba(0,0,0,0.1); padding:0px 8px; font-size:12px; cursor:pointer;}
+div[data-role=janggi] > div[data-role=confirm] > div > div[data-role=box] > div[data-role=timer] {font-size:12px; color:#f5d9b8; text-shadow:1px 1px 1px rgba(0,0,0,0.3); position:absolute; top:20px; right:12px; text-align:right;}
+
+
+/**
+ * 게임판
+ */
+div[data-role=janggi] > div[data-role=panel] {width:670px; height:700px; background:url(./images/background.png); display:inline-block; vertical-align:middle; box-sizing:border-box; border-right:1px solid #25221f; position:relative;}
+div[data-role=janggi] > div[data-role=panel] > div[data-role=board] {width:650px; height:666px; background:url(./images/board.png) no-repeat 50% 50%; position:relative; margin:17px 10px 17px 9px;}
+
+
+/**
+ * 게임판 좌표
+ */
+div[data-role=janggi] > div[data-role=panel] > div[data-role=board] > div[data-role=position] {width:64px; height:64px; position:absolute; z-index:5; box-sizing:border-box;}
+div[data-role=janggi] > div[data-role=panel] > div[data-role=board] > div[data-role=position][data-x="0"] {left:5px;}
+div[data-role=janggi] > div[data-role=panel] > div[data-role=board] > div[data-role=position][data-x="1"] {left:77px;}
+div[data-role=janggi] > div[data-role=panel] > div[data-role=board] > div[data-role=position][data-x="2"] {left:149px;}
+div[data-role=janggi] > div[data-role=panel] > div[data-role=board] > div[data-role=position][data-x="3"] {left:221px;}
+div[data-role=janggi] > div[data-role=panel] > div[data-role=board] > div[data-role=position][data-x="4"] {left:293px;}
+div[data-role=janggi] > div[data-role=panel] > div[data-role=board] > div[data-role=position][data-x="5"] {left:365px;}
+div[data-role=janggi] > div[data-role=panel] > div[data-role=board] > div[data-role=position][data-x="6"] {left:437px;}
+div[data-role=janggi] > div[data-role=panel] > div[data-role=board] > div[data-role=position][data-x="7"] {left:509px;}
+div[data-role=janggi] > div[data-role=panel] > div[data-role=board] > div[data-role=position][data-x="8"] {left:581px;}
+div[data-role=janggi] > div[data-role=panel] > div[data-role=board] > div[data-role=position][data-y="0"] {top:13px;}
+div[data-role=janggi] > div[data-role=panel] > div[data-role=board] > div[data-role=position][data-y="1"] {top:77px;}
+div[data-role=janggi] > div[data-role=panel] > div[data-role=board] > div[data-role=position][data-y="2"] {top:141px;}
+div[data-role=janggi] > div[data-role=panel] > div[data-role=board] > div[data-role=position][data-y="3"] {top:205px;}
+div[data-role=janggi] > div[data-role=panel] > div[data-role=board] > div[data-role=position][data-y="4"] {top:269px;}
+div[data-role=janggi] > div[data-role=panel] > div[data-role=board] > div[data-role=position][data-y="5"] {top:333px;}
+div[data-role=janggi] > div[data-role=panel] > div[data-role=board] > div[data-role=position][data-y="6"] {top:397px;}
+div[data-role=janggi] > div[data-role=panel] > div[data-role=board] > div[data-role=position][data-y="7"] {top:461px;}
+div[data-role=janggi] > div[data-role=panel] > div[data-role=board] > div[data-role=position][data-y="8"] {top:525px;}
+div[data-role=janggi] > div[data-role=panel] > div[data-role=board] > div[data-role=position][data-y="9"] {top:588px;}
+
+
+/**
+ * 기물 이동영역 좌표
+ */
+div[data-role=janggi] > div[data-role=panel] > div[data-role=board] > button[data-role=movable] {width:64px; height:64px; position:absolute; z-index:10; box-sizing:border-box; border:0; cursor:pointer; background-image:url(./images/movable.png); background-repeat:no-repeat; background-position:50% 50%; background-color:transparent;}
+div[data-role=janggi] > div[data-role=panel] > div[data-role=board] > button[data-role=movable].disabled {cursor:not-allowed; background-image:url(./images/disabled.png);}
+div[data-role=janggi] > div[data-role=panel] > div[data-role=board] > button[data-role=movable][data-x="0"] {left:5px;}
+div[data-role=janggi] > div[data-role=panel] > div[data-role=board] > button[data-role=movable][data-x="1"] {left:77px;}
+div[data-role=janggi] > div[data-role=panel] > div[data-role=board] > button[data-role=movable][data-x="2"] {left:149px;}
+div[data-role=janggi] > div[data-role=panel] > div[data-role=board] > button[data-role=movable][data-x="3"] {left:221px;}
+div[data-role=janggi] > div[data-role=panel] > div[data-role=board] > button[data-role=movable][data-x="4"] {left:293px;}
+div[data-role=janggi] > div[data-role=panel] > div[data-role=board] > button[data-role=movable][data-x="5"] {left:365px;}
+div[data-role=janggi] > div[data-role=panel] > div[data-role=board] > button[data-role=movable][data-x="6"] {left:437px;}
+div[data-role=janggi] > div[data-role=panel] > div[data-role=board] > button[data-role=movable][data-x="7"] {left:509px;}
+div[data-role=janggi] > div[data-role=panel] > div[data-role=board] > button[data-role=movable][data-x="8"] {left:581px;}
+div[data-role=janggi] > div[data-role=panel] > div[data-role=board] > button[data-role=movable][data-y="0"] {top:13px;}
+div[data-role=janggi] > div[data-role=panel] > div[data-role=board] > button[data-role=movable][data-y="1"] {top:77px;}
+div[data-role=janggi] > div[data-role=panel] > div[data-role=board] > button[data-role=movable][data-y="2"] {top:141px;}
+div[data-role=janggi] > div[data-role=panel] > div[data-role=board] > button[data-role=movable][data-y="3"] {top:205px;}
+div[data-role=janggi] > div[data-role=panel] > div[data-role=board] > button[data-role=movable][data-y="4"] {top:269px;}
+div[data-role=janggi] > div[data-role=panel] > div[data-role=board] > button[data-role=movable][data-y="5"] {top:333px;}
+div[data-role=janggi] > div[data-role=panel] > div[data-role=board] > button[data-role=movable][data-y="6"] {top:397px;}
+div[data-role=janggi] > div[data-role=panel] > div[data-role=board] > button[data-role=movable][data-y="7"] {top:461px;}
+div[data-role=janggi] > div[data-role=panel] > div[data-role=board] > button[data-role=movable][data-y="8"] {top:525px;}
+div[data-role=janggi] > div[data-role=panel] > div[data-role=board] > button[data-role=movable][data-y="9"] {top:588px;}
+
+
+/**
+ * 기물 스타일
+ */
+div[data-role=janggi] > div[data-role=panel] > div[data-role=board] button[data-role=stone] {width:64px; height:64px; border:0; background-color:transparent; background-repeat:no-repeat; position:relative;}
+div[data-role=janggi] > div[data-role=panel] > div[data-role=board] button[data-role=stone][data-team=han] {background-image:url(./images/stone_han.png);}
+div[data-role=janggi] > div[data-role=panel] > div[data-role=board] button[data-role=stone][data-team=cho] {background-image:url(./images/stone_cho.png);}
+div[data-role=janggi] > div[data-role=panel] > div[data-role=board] button[data-role=stone][data-type=king] {background-position:0px 0px;}
+div[data-role=janggi] > div[data-role=panel] > div[data-role=board] button[data-role=stone][data-type=cha] {background-position:-64px 0px;}
+div[data-role=janggi] > div[data-role=panel] > div[data-role=board] button[data-role=stone][data-type=ma] {background-position:-128px 0px;}
+div[data-role=janggi] > div[data-role=panel] > div[data-role=board] button[data-role=stone][data-type=sang] {background-position:-192px 0px;}
+div[data-role=janggi] > div[data-role=panel] > div[data-role=board] button[data-role=stone][data-type=po] {background-position:0px -64px;}
+div[data-role=janggi] > div[data-role=panel] > div[data-role=board] button[data-role=stone][data-type=sa] {background-position:-64px -64px;}
+div[data-role=janggi] > div[data-role=panel] > div[data-role=board] button[data-role=stone][data-type=jol] {background-position:-128px -64px;}
+div[data-role=janggi] > div[data-role=panel] > div[data-role=board] button[data-role=stone].selected:before {background-image:url(./images/selected.png); content:" "; position:absolute; z-index:-1; top:0; left:0; display:block; width:64px; height:64px; background-repeat:no-repeat; background-position:-64px 0;}
+div[data-role=janggi] > div[data-role=panel] > div[data-role=board] button[data-role=stone][data-type=king].selected:before {background-position-x:-128px;}
+div[data-role=janggi] > div[data-role=panel] > div[data-role=board] button[data-role=stone][data-type=jol].selected:before {background-position-x:0px;}
+div[data-role=janggi] > div[data-role=panel] > div[data-role=board] button[data-role=stone][data-type=sa].selected:before {background-position-x:0px;}
+div[data-role=janggi] > div[data-role=panel] > div[data-role=board] button[data-role=stone].moved:before {background-image:url(./images/selected.png); content:" "; position:absolute; z-index:-1; top:0; left:0; display:block; width:64px; height:64px; background-repeat:no-repeat; background-position:-64px 0;}
+div[data-role=janggi] > div[data-role=panel] > div[data-role=board] button[data-role=stone][data-type=king].moved:before {background-position-x:-128px;}
+div[data-role=janggi] > div[data-role=panel] > div[data-role=board] button[data-role=stone][data-type=jol].moved:before {background-position-x:0px;}
+div[data-role=janggi] > div[data-role=panel] > div[data-role=board] button[data-role=stone][data-type=sa].moved:before {background-position-x:0px;}
+div[data-role=janggi] > div[data-role=panel] > div[data-role=board].han {transform:rotate(180deg);}
+div[data-role=janggi] > div[data-role=panel] > div[data-role=board].han > div[data-role=position] {transform:rotate(180deg);}
+div[data-role=janggi] > div[data-role=panel] > div[data-role=board].han button[data-role=stone][data-team=han] {cursor:pointer;}
+div[data-role=janggi] > div[data-role=panel] > div[data-role=board].cho button[data-role=stone][data-team=cho] {cursor:pointer;}
+div[data-role=janggi] > div[data-role=panel] > div[data-role=disabled] {width:100%; height:100%; position:absolute; z-index:20; top:0; left:0; cursor:default;}
+
+
+/**
+ * 게임 경고창
+ */
+div[data-role=janggi] > div[data-role=panel] > div[data-role=alert] {position:absolute; width:200px; height:140px; z-index:50; top:calc(50% - 70px); right:calc(50% - 100px); text-align:center;}
+div[data-role=janggi] > div[data-role=panel] > div[data-role=alert][data-type=jang] > div[data-role=box] {width:100%; height:100%; background:url(./images/alert_jang.png) no-repeat 50% 50%;}
+div[data-role=janggi] > div[data-role=panel] > div[data-role=alert][data-type=endjang] > div[data-role=box] {width:100%; height:100%; background:url(./images/alert_endjang.png) no-repeat 50% 50%;}
+div[data-role=janggi] > div[data-role=panel] > div[data-role=alert][data-type=timecounting] > div[data-role=box] {font-size:14px; background:rgba(0,0,0,0.8); color:#fff; text-align:center; height:40px; margin-top:50px; display:inline-block; padding:0px 14px; line-height:40px; border-radius:5px;}
+div[data-role=janggi] > div[data-role=panel] > div[data-role=alert][data-type=turn] > div[data-role=box] {font-size:14px; background:rgba(0,0,0,0.8); color:#fff; text-align:center; height:40px; margin-top:200px; display:inline-block; padding:0px 14px; line-height:40px; border-radius:5px;}
+div[data-role=janggi] > div[data-role=panel] > div[data-role=alert][data-type=lastcounting] > div[data-role=box] {font-size:14px; background:rgba(0,0,0,0.8); color:#F44336; text-align:center; height:40px; margin-top:50px; display:inline-block; padding:0px 14px; line-height:40px; text-shadow:1px 1px 1px rgba(0,0,0,0.5); border-radius:5px;}
+
+
+/**
+ * 게임 메시지창
+ */
+div[data-role=janggi] > div[data-role=panel] > div[data-role=message] {position:absolute; width:100%; height:100%; background:rgba(0,0,0,0.3); display:table; z-index:50; top:0; left:0;}
+div[data-role=janggi] > div[data-role=panel] > div[data-role=message] > div {display:table-cell; width:100%; height:100%; vertical-align:middle; text-align:center;}
+div[data-role=janggi] > div[data-role=panel] > div[data-role=message] > div > div[data-role=box] {width:400px; min-height:100px; box-sizing:border-box; display:inline-block; background:#865e2f; border:2px solid #a17239; border-radius:5px; box-shadow:1px 1px 3px rgba(0,0,0,0.5); text-align:left; padding:8px; position:relative;}
+div[data-role=janggi] > div[data-role=panel] > div[data-role=message] > div > div[data-role=box] > h4 {width:100%; height:32px; line-height:32px; font-size:14px; font-weight:bold; text-shadow:1px 1px 1px rgba(0,0,0,0.5); color:#fff; box-sizing:border-box; padding:0px 8px; margin-bottom:8px;}
+div[data-role=janggi] > div[data-role=panel] > div[data-role=message] > div > div[data-role=box] > p {display:block; width:100%; background:#714e28; padding:16px; box-sizing:border-box; border-radius:5px; box-shadow:inset 2px 2px 2px rgba(0,0,0,0.3); font-size:12px; color:#f5d9b8; line-height:1.6;}
+
+div[data-role=janggi] > div[data-role=panel] > div[data-role=message] > div > div[data-role=box] > div[data-role=position] {width:100%; background:#714e28; padding:8px; box-sizing:border-box; border-radius:5px; box-shadow:inset 2px 2px 2px rgba(0,0,0,0.3); font-size:0; text-align:center;}
+
+div[data-role=janggi] > div[data-role=panel] > div[data-role=message] > div > div[data-role=box] > div[data-role=position] > button {width:177px; height:52px; background-repeat:no-repeat; cursor:pointer; box-sizing:content-box; border:2px solid transparent; background:transparent; border-radius:5px;}
+div[data-role=janggi] > div[data-role=panel] > div[data-role=message] > div > div[data-role=box] > div[data-role=position] > button.selected {border-color:#550000 !important; background-color:#a57946;}
+div[data-role=janggi] > div[data-role=panel] > div[data-role=message] > div > div[data-role=box] > div[data-role=position] > button:hover {background-color:#a57946; border-color:#714e28;}
+div[data-role=janggi] > div[data-role=panel] > div[data-role=message] > div > div[data-role=box] > div[data-role=position].han > button {background-image:url(./images/position_han.png);}
+div[data-role=janggi] > div[data-role=panel] > div[data-role=message] > div > div[data-role=box] > div[data-role=position].cho > button {background-image:url(./images/position_cho.png);}
+div[data-role=janggi] > div[data-role=panel] > div[data-role=message] > div > div[data-role=box] > div[data-role=position] > button:nth-child(1) {background-position:0 0;}
+div[data-role=janggi] > div[data-role=panel] > div[data-role=message] > div > div[data-role=box] > div[data-role=position] > button:nth-child(2) {background-position:-177px 0;}
+div[data-role=janggi] > div[data-role=panel] > div[data-role=message] > div > div[data-role=box] > div[data-role=position] > button:nth-child(3) {background-position:0 -52px;}
+div[data-role=janggi] > div[data-role=panel] > div[data-role=message] > div > div[data-role=box] > div[data-role=position] > button:nth-child(4) {background-position:-177px -52px;}
+div[data-role=janggi] > div[data-role=panel] > div[data-role=message] > div > div[data-role=box] > div[data-role=buttons] {text-align:right; font-size:0; margin-top:8px;}
+div[data-role=janggi] > div[data-role=panel] > div[data-role=message] > div > div[data-role=box] > div[data-role=buttons] > button {height:30px; margin-left:5px; border:1px solid rgba(0,0,0,0.8); border-radius:3px; background:#613927; background:linear-gradient(to bottom,#7b4a31 0%,#4d2a1c 100%); box-shadow:inset 2px 2px 2px rgba(255,255,255,0.15), 1px 1px 2px rgba(255,255,255,0.15); color:#fff; font-weight:bold; text-shadow:1px 1px 2px rgba(0,0,0,0.1); padding:0px 8px; font-size:12px; cursor:pointer;}
+div[data-role=janggi] > div[data-role=panel] > div[data-role=message] > div > div[data-role=box] > div[data-role=timer] {font-size:12px; color:#f5d9b8; text-shadow:1px 1px 1px rgba(0,0,0,0.3); position:absolute; top:20px; right:12px; text-align:right;}
+
+
+/**
+ * 게임 타이머
+ */
+div[data-role=janggi] > div[data-role=frame] > div[data-role=timer] {width:100%; height:50px; top:26px; left:0; position:absolute; z-index:5;}
+div[data-role=janggi] > div[data-role=frame] > div[data-role=timer] > div {width:calc(50% - 25px); height:50px; display:inline-block; vertical-align:middle;}
+div[data-role=janggi] > div[data-role=frame] > div[data-role=timer] > div.clock {width:50px; height:50px; background:url(./images/clock.png);}
+div[data-role=janggi] > div[data-role=frame] > div[data-role=timer] > div.clock > i {display:block; width:50px; height:50px; background:url(./images/pin.png);}
+div[data-role=janggi] > div[data-role=frame] > div[data-role=timer] > div > b {display:block; height:14px; padding:8px 0px 3px 0px; font-size:12px; color:#ea952f; text-shadow:1px 1px 1px rgba(0,0,0,0.3); line-height:14px;}
+div[data-role=janggi] > div[data-role=frame] > div[data-role=timer] > div > small {display:block; height:14px; color:#fff; font-size:12px; line-height:14px; padding:5px 0px 6px 0px;}
+div[data-role=janggi] > div[data-role=frame] > div[data-role=timer] > div.han {text-align:right;}
+
+
+/**
+ * 플레이어 정보
+ */
+div[data-role=janggi] > div[data-role=frame] > div[data-role=player] {width:100%; height:90px; border-bottom:1px solid #3e3a37; box-sizing:border-box;}
+div[data-role=janggi] > div[data-role=frame] > div[data-role=player] > div {width:50%; height:89px; box-sizing:border-box; display:inline-block; border-top:3px solid #7e160e; vertical-align:middle; position:relative;}
+div[data-role=janggi] > div[data-role=frame] > div[data-role=player] > div > label {display:block; width:100%; height:86px; border-left:1px solid #3e3a37; border-right:1px solid #25221f; background:#34302c; box-sizing:border-box; background-repeat:no-repeat; background-position-y:12px; padding-top:14px;}
+div[data-role=janggi] > div[data-role=frame] > div[data-role=player] > div > label > b {display:block; color:#fff; font-size:14px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; height:20px; line-height:16px; text-shadow:1px 1px 1px rgba(0,0,0,0.3); padding:2px 0px;}
+div[data-role=janggi] > div[data-role=frame] > div[data-role=player] > div > label > i {display:block; height:16px; line-height:16px; font-size:12px; color:#ea952f; text-shadow:1px 1px 1px rgba(0,0,0,0.3); font-style:normal;}
+div[data-role=janggi] > div[data-role=frame] > div[data-role=player] > div > label > small {display:block; height:16px; line-height:16px; font-size:12px; color:#908986; text-shadow:1px 1px 1px rgba(0,0,0,0.3); font-style:normal;}
+div[data-role=janggi] > div[data-role=frame] > div[data-role=player] > div.han > label {background-image:url(./images/icon_han.png); background-position-x:0; padding-left:80px;}
+div[data-role=janggi] > div[data-role=frame] > div[data-role=player] > div.cho > label {background-image:url(./images/icon_cho.png); background-position-x:100%; border-right:0; padding-right:80px; text-align:right;}
+div[data-role=janggi] > div[data-role=frame] > div[data-role=player] > div.on {border-top:3px solid #d9350c;}
+div[data-role=janggi] > div[data-role=frame] > div[data-role=player] > div.on > label:before {position:absolute; content:""; border-top:10px solid #d9350c; border-left:10px solid transparent; border-right:10px solid transparent; top:0;}
+div[data-role=janggi] > div[data-role=frame] > div[data-role=player] > div.on.han > label:before {left:30px;}
+div[data-role=janggi] > div[data-role=frame] > div[data-role=player] > div.on.cho > label:before {right:30px;}
+
+
+/**
+ * 게임버튼
+ */
+div[data-role=janggi] > div[data-role=frame] > div[data-role=gamebuttons] {width:100%; height:50px; border-top:1px solid #24221f; box-sizing:border-box;}
+div[data-role=janggi] > div[data-role=frame] > div[data-role=gamebuttons] > button {width:25%; height:49px; box-sizing:border-box; background:#33302c; color:#de9846; text-shadow:1px 1px 1px rgba(0,0,0,0.5); font-size:14px; line-height:48px; cursor:pointer; border:0; border-left:1px solid #3d3a37; border-right:1px solid #24221f; border-top:1px solid #3d3a37;}
+div[data-role=janggi] > div[data-role=frame] > div[data-role=gamebuttons] > button[data-action=close] {color:#e23f2b;}
+div[data-role=janggi] > div[data-role=frame] > div[data-role=gamebuttons] > button:hover {background:#3d3a37;}
+
+/**
+ * 미니톡 위젯 기본 속성 정의
+ */
+div[data-role=frame] {width:430px; height:700px; display:inline-block; vertical-align:middle; position:relative;}
+
+/**
+ * 헤더
+ */
+div[data-role=frame] > header {width:100%; height:50px; background:#242120; background:linear-gradient(to bottom,#2f2c29 0%,#242120 100%); box-sizing:border-box; border-bottom:1px solid #25221f;}
+div[data-role=frame] > header > h1 {max-width:calc(100% - 100px); height:50px; line-height:50px; box-sizing:border-box; font-size:16px; font-weight:bold; color:#fff; padding:0px 10px 0px 20px; white-space:nowrap; text-overflow:ellipsis; overflow:hidden; text-shadow:1px 1px 1px rgba(0,0,0,1); display:inline-block; vertical-align:middle;}
+div[data-role=frame] > header > label[data-role=count] {display:inline-block; font-size:12px; color:#908986; text-shadow:1px 1px 1px rgba(0,0,0,0.3); height:30x; padding-top:5px; line-height:45px; vertical-align:middle;}
+div[data-role=frame] > header > label[data-role=count]:before {content:"(";}
+div[data-role=frame] > header > label[data-role=count]:after {content:")";}
+div[data-role=frame] > header > label[data-role=count]:empty {display:none;}
+
+/**
+ * 헤더버튼 (v6)
+ */
+div[data-role=frame] > header > div[data-role=tabs] {display:none;}
+
+
+/**
+ * 탭바 (v7)
+ */
+div[data-role=frame] > aside {display:none;}
+
+
+/**
+ * 알림영역
+ */
+div[data-role=frame] > div[data-role=notifications] {top:160px;}
+
+
+/**
+ * 메인섹션
+ * 헤더높이를 제외한다.
+ */
+div[data-role=frame] > main {width:100%; height:510px; box-sizing:border-box; border-left:1px solid #3e3a37; border-bottom:1px solid #25221f;}
+
+
+/**
+ * 푸터
+ * 푸터는 채팅메시지 입력에 따라 높이가 가변이므로, 최소높이(기본높이)를 설정한다.
+ */
+div[data-role=frame] > footer {width:100%; min-height:40px; background:#2f2f2f; box-sizing:border-box; left:0; bottom:50px;}
+
+
+/**
+ * 프로그래스바
+ */
+div[data-role=frame] > footer > div[data-role=progress] {display:none;}
+
+
+/**
+ * 툴바
+ */
+div[data-role=frame] > footer > ul[data-role=tools] {display:none;}
+
+
+/**
+ * 툴목록
+ */
+div[data-role=frame] > footer > ul[data-role=lists] {display:none;}
+
+
+/**
+ * 입력폼
+ */
+div[data-role=frame] > footer > div[data-role=input] {padding:5px;}
+div[data-role=frame] > footer > div[data-role=input] > textarea {width:calc(100% - 60px); height:30px; color:#ea952f; border:2px solid #6c4b2d; border-radius:3px; box-sizing:border-box; padding:4px; line-height:18px; font-size:12px; background:#2c2723;}
+div[data-role=frame] > footer > div[data-role=input] > button {width:55px; height:30px; margin-left:5px; position:absolute; right:5px; bottom:5px; border:1px solid rgba(0,0,0,0.8); border-radius:3px; background:#613927; background:linear-gradient(to bottom,#7b4a31 0%,#4d2a1c 100%); box-shadow:inset 2px 2px 2px rgba(255,255,255,0.15), 1px 1px 2px rgba(255,255,255,0.15); color:#fff; font-weight:bold; text-shadow:1px 1px 2px rgba(0,0,0,0.1); padding:0px 5px; cursor:pointer;}
+
+
+/**
+ * 툴바레이어
+ */
+div[data-role=frame] > footer > div[data-role=layers] {display:none;}
+
+/**
+ * 채팅섹션
+ * 채팅섹션의 경우, 푸터영역의 기본크기만큼 높이를 줄여준다.
+ */
+div[data-role=frame] > main > section[data-role=chat] {height:calc(100% - 40px);}
+div[data-role=frame] > main > section[data-role=chat] > div[data-role] > div[data-role=photo] {float:left; width:34px; height:34px; margin-right:6px; background-image:url(./images/nophoto.png); background-repeat:no-repeat; background-size:cover; background-position:50% 50%; border-radius:50%; box-sizing:border-box; border:1px solid #999;}
+div[data-role=frame] > main > section[data-role=chat] > div[data-role] > div[data-role=nickname] {float:left; width:calc(100% - 50px); height:20px; font-size:12px; font-weight:bold; height:20px; line-height:16px; overflow:hidden; white-space:nowrap; text-overflow:ellipsis;}
+div[data-role=frame] > main > section[data-role=chat] > div[data-role] > div[data-role=nickname] > label[data-role=user] > span > i.me {color:#999;}
+div[data-role=frame] > main > section[data-role=chat] > button[data-action=history] {display:block; width:calc(100% - 10px); height:30px; margin:5px; border:1px solid #666; color:#fff; background:#777; cursor:pointer; font-size:12px;}
+
+/**
+ * 시스템메시지
+ */
+div[data-role=frame] > main > section[data-role=chat] > div[data-role=item] {margin:5px; -ms-word-break:break-all; word-wrap:break-word; -ms-user-select:auto; -moz-user-select:auto; -webkit-user-select:auto;}
+div[data-role=frame] > main > section[data-role=chat] > div[data-role=item].system {padding:5px; font-size:12px; line-height:1.4; text-align:justify;}
+div[data-role=frame] > main > section[data-role=chat] > div[data-role=item].system.info {border:1px solid #18295b; background:#2847a0; color:#fff;}
+div[data-role=frame] > main > section[data-role=chat] > div[data-role=item].system.action {border:1px solid #236a1f; background:#308f2b; color:#fff;}
+div[data-role=frame] > main > section[data-role=chat] > div[data-role=item].system.error {border:1px solid #b82332; background:#d33948; color:#fff;}
+div[data-role=frame] > main > section[data-role=chat] > div[data-role=item].system.user {color:#666; margin:0px; padding:2px 5px;}
+div[data-role=frame] > main > section[data-role=chat] > div[data-role=item].system.plugin {background:#DA81F5; color:#fff;}
+
+/**
+ * 채팅메시지
+ */
+div[data-role=frame] > main > section[data-role=chat] > div[data-role=message] {margin:5px;}
+div[data-role=frame] > main > section[data-role=chat] > div[data-role=message]:after {clear:both; content:""; display:block;}
+div[data-role=frame] > main > section[data-role=chat] > div[data-role=message].whisper {color:#ff00ff;}
+div[data-role=frame] > main > section[data-role=chat] > div[data-role=message].log {opacity:0.5;}
+div[data-role=frame] > main > section[data-role=chat] > div[data-role=message] > div[data-role=context] {float:left; width:calc(100% - 50px); box-sizing:border-box;}
+div[data-role=frame] > main > section[data-role=chat] > div[data-role=message] > div[data-role=context] > div > div[data-role=balloon] {margin:0px; font-size:12px; color:#ea952f; line-height:1.6;}
+div[data-role=frame] > main > section[data-role=chat] > div[data-role=message] > div[data-role=context] > div > div[data-role=balloon] > span.text > a {text-decoration:none; color:#2196F3;}
+div[data-role=frame] > main > section[data-role=chat] > div[data-role=message] > div[data-role=context] > div > div[data-role=balloon] > span.text > a:hover {text-decoration:underline;}
+div[data-role=frame] > main > section[data-role=chat] > div[data-role=message] > div[data-role=context] > div > div[data-role=balloon] > span.text:after {content:"-"; color:#222;}
+div[data-role=frame] > main > section[data-role=chat] > div[data-role=message] > div[data-role=context] > div > div[data-role=balloon] > span.time {color:#999; white-space:nowrap;}
+div[data-role=frame] > main > section[data-role=chat] > div[data-role=message] > div[data-role=context] > div > div[data-role=balloon] > span.time > time {display:none; font-size:10px;}
+div[data-role=frame] > main > section[data-role=chat] > div[data-role=message] > div[data-role=context] > div > div[data-role=balloon] > span.time > time:before {content:"(";}
+div[data-role=frame] > main > section[data-role=chat] > div[data-role=message] > div[data-role=context] > div > div[data-role=balloon] > span.time > time:after {content:")";}
+div[data-role=frame] > main > section[data-role=chat] > div[data-role=message] > div[data-role=context] > div > div[data-role=balloon] > span.time > i.sending {color:#999; font-family:moimz; font-size:10px; font-style:normal;}
+div[data-role=frame] > main > section[data-role=chat] > div[data-role=message] > div[data-role=context] > div > div[data-role=balloon] > span.time > i.sending:before {content:"\ef17";}
+div[data-role=frame] > main > section[data-role=chat] > div[data-role=message] > div[data-role=context] > div > div[data-role=balloon] > span.time > i.fail {color:#F44336; font-family:moimz; font-size:10px; font-style:normal;}
+div[data-role=frame] > main > section[data-role=chat] > div[data-role=message] > div[data-role=context] > div > div[data-role=balloon] > span.time > i.fail:before {content:"\eb02";}
+div[data-role=frame] > main > section[data-role=chat] > div[data-role=message] > div[data-role=context] > div:last-child > div > span.time > time {display:inline-block;}
+div[data-role=frame] > main > section[data-role=chat] > div[data-role=message].whisper > div[data-role=context] > div > div[data-role=balloon] {color:#ff00ff;}
+div[data-role=frame] > main > section[data-role=chat] > div[data-role=message] > div[data-role=context] > div > div[data-role=file] {padding:5px 0px; max-width:300px;}
+div[data-role=frame] > main > section[data-role=chat] > div[data-role=message] > div[data-role=context] > div > div[data-role=file] > a {border:1px solid #444; color:#999; text-decoration:none; font-size:0;}
+div[data-role=frame] > main > section[data-role=chat] > div[data-role=message] > div[data-role=context] > div > div[data-role=file] > a > i {display:block; float:left; width:30px; height:30px; margin:10px; vertical-align:middle;}
+div[data-role=frame] > main > section[data-role=chat] > div[data-role=message] > div[data-role=context] > div > div[data-role=file] > a > b {display:block; width:calc(100% - 60px); height:20px; line-height:20px; font-size:12px; color:#eee; margin:5px 10px 0px 0px; overflow:hidden; white-space:nowrap; text-overflow:ellipsis;}
+div[data-role=frame] > main > section[data-role=chat] > div[data-role=message] > div[data-role=context] > div > div[data-role=file] > a > p {display:block; width:calc(100% - 60px); height:20px; line-height:20px; font-size:12px; color:#999; margin:0px 10px 5px 0px; overflow:hidden; white-space:nowrap; text-overflow:ellipsis;}
+div[data-role=frame] > main > section[data-role=chat] > div[data-role=message] > div[data-role=context] > div > div[data-role=website] {padding:5px 0px; max-width:300px;}
+div[data-role=frame] > main > section[data-role=chat] > div[data-role=message] > div[data-role=context] > div > div[data-role=website] > a {border:1px solid #444; color:#222; text-decoration:none;}
+div[data-role=frame] > main > section[data-role=chat] > div[data-role=message] > div[data-role=context] > div > div[data-role=website] > a > h4 {box-sizing:border-box; width:100%; padding:8px 8px 5px 8px; white-space:nowrap; text-overflow:ellipsis; overflow:hidden; font-size:12px; color:#eee;}
+div[data-role=frame] > main > section[data-role=chat] > div[data-role=message] > div[data-role=context] > div > div[data-role=website] > a > p {display:-webkit-box; padding:0px 8px 8px 8px; line-height:20px; min-height:20px; max-height:40px; overflow:hidden; white-space:normal; -webkit-line-clamp:2; text-overflow:ellipsis; -webkit-box-orient:vertical; color:#999; font-size:12px;}
+
+/**
+ * 유저메시지
+ */
+div[data-role=frame] > main > section[data-role=chat] > div[data-role=user] {margin:5px;}
+div[data-role=frame] > main > section[data-role=chat] > div[data-role=user]:after {clear:both; content:""; display:block;}
+div[data-role=frame] > main > section[data-role=chat] > div[data-role=user] > div.box {float:left; width:calc(100% - 50px); box-sizing:border-box;}
+div[data-role=frame] > main > section[data-role=chat] > div[data-role=user] > div.box > div > div {margin:0px; font-size:12px; line-height:1.6;}
+div[data-role=frame] > main > section[data-role=chat] > div[data-role=user].join {color:#3efeff; opacity:0.7;}
+div[data-role=frame] > main > section[data-role=chat] > div[data-role=user].leave {color:#fff; opacity:0.5;}
+div[data-role=frame] > main > section[data-role=chat] > div[data-role=user].update {color:#3efeff;}
+div[data-role=frame] > main > section[data-role=chat] > div[data-role=line] {border-top:1px dotted #858484; margin:10px 5px 5px 5px; height:10px; position:relative;}
+div[data-role=frame] > main > section[data-role=chat] > div[data-role=line] > div {width:120px; height:12px; line-height:12px; background:#46443f; position:absolute; top:-6px; left:calc(50% - 50px); text-align:center; color:#999; font-size:11px;}
+
+
+/**
+ * 유저메뉴
+ */
+ul[data-role=usermenus] {border-radius:3px; box-shadow:1px 1px 2px rgba(0,0,0,0.1); border:1px solid #444; background:#777;}
+ul[data-role=usermenus] > li[data-role=nickname] {background:#173435; color:#fff;}
+ul[data-role=usermenus] > li[data-role=nickname] > i.status {border:1px solid #fff;}
+ul[data-role=usermenus] > li[data-role=nickname] > i.mi-loading {color:#fff;}
+ul[data-role=usermenus] > li[data-role=nickname] > i.online {background:#fff;}
+ul[data-role=usermenus] > li[data-role=nickname] > label {color:#fff;}
+ul[data-role=usermenus] > li > button {color:#fff;}
+ul[data-role=usermenus] > li > button:hover {background:#ccc; color:#222;}
+ul[data-role=usermenus] > li > button > i {}
+ul[data-role=usermenus] > li.separator {border-top:1px solid #444; background:#fff;}
+
+
+/**
+ * 유저닉네임
+ */
+label[data-role=user] > span {color:#fff;}
+label[data-role=user] > span > i.admin {font-family:moimz; color:#FF9800; font-size:0;}
+label[data-role=user] > span > i.admin:before {content:"\ec33"; font-size:12px; padding:0px 2px;}
+label[data-role=user] > span > i.admin:after {content:"";}
+
+
+/**
+ * 섹션 공통
+ */
+section[data-role] > h2 {background:#173435; color:#fff;}
+section[data-role] > button[data-action=close] {color:#fff; background:transparent;}
+section[data-role] > button[data-action=close]:before {content:"\eb03";}
+section[data-role] > div[data-role=content] {background:#222;}
+section[data-role] > div[data-role=content] > h4 {color:#fff;}
+section[data-role] > div[data-role=content] > label {color:#fff;}
+section[data-role] > div[data-role=content] > label.checkbox {}
+section[data-role] > div[data-role=content] > label > input {border:1px solid #1a1a1a; background-color:#343434; color:#fff;}
+section[data-role] > div[data-role=content] > label > select {border:1px solid #1a1a1a; background-color:#343434; color:#fff;}
+section[data-role] > div[data-role=content] > label > input[type=checkbox]:after {border:1px solid #ccc;}
+section[data-role] > div[data-role=content] > label > input[type=checkbox]:checked:after {border-color:#1e71b3; background:#1e71b3; color:#fff;}
+section[data-role] > div[data-role=content] > label > p {color:#fff;}
+section[data-role] > div[data-role=content] > hr {border-top:1px solid #444;}
+section[data-role] > div[data-role=button] {background:#fff;}
+section[data-role] > div[data-role=button] > ul > li > button {background:#666; color:#fff; border-top:1px solid #656565;}
+section[data-role] > div[data-role=button] > ul > li > button[data-action=confirm] {background:#1e71b3; color:#fff; border-top-color:#1e71b3;}

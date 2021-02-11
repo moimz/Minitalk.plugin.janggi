@@ -1,0 +1,12 @@
+/**
+ * 이 파일은 미니톡 클라이언트 장기 플러그인의 일부입니다. (https://www.minitalk.io)
+ *
+ * 장기플러그인 스타일시트를 정의한다.
+ * 
+ * @file /plugins/janggi/style.css
+ * @author Arzz (arzz@arzz.com)
+ * @license MIT License
+ * @version 1.0.0
+ * @modified 2021. 2. 5.
+ */
+section[data-tab=boxes] > ul > li > label[data-role=box] > i.icon.janggi {background-image:url(./images/icon.png);}
