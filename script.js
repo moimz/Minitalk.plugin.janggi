@@ -967,6 +967,10 @@ me.game = {
 	 * 대국을 재개한다.
 	 */
 	resumeGame:function() {
+		// 접속상태를 갱신한다.
+		me.game.status.han.connected = true;
+		me.game.status.cho.connected = true;
+		
 		// 대국단계를 조절한다.
 		if (me.game.status.han.position > -1 && me.game.status.cho.position > -1) {
 			me.game.step = 10;
@@ -1077,6 +1081,8 @@ me.game = {
 		var $janggi = $("div[data-role=janggi]");
 		var $board = $("div[data-role=panel] > div[data-role=board]",$janggi);
 		$board.removeClass("han").removeClass("cho").addClass(me.game.team === "han" ? "han" : "cho");
+		
+		me.game.closeMessage();
 		
 		// 대국자를 업데이트 한다.
 		me.game.updatePlayers();
@@ -1383,6 +1389,9 @@ me.game = {
 			me.game.winner(winner);
 		}
 	},
+	/**
+	 * 외통수인지 확인한다.
+	 */
 	checkEndJang:function(team) {
 		var $janggi = $("div[data-role=janggi]");
 		var $board = $("div[data-role=panel] > div[data-role=board]",$janggi);
