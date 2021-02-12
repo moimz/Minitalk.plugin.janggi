@@ -3,7 +3,7 @@
  *
  * 박스에 장기대국을 추가합니다.
  * 
- * @file /plugins/filterword/script.js
+ * @file /plugins/janggi/script.js
  * @author Arzz (arzz@arzz.com)
  * @license MIT License
  * @version 1.0.0
