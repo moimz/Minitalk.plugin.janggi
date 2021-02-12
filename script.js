@@ -1039,6 +1039,8 @@ me.game = {
 		var $janggi = $("div[data-role=janggi]");
 		var $player = $("div[data-role=player]",$janggi);
 		
+		var points = me.game.getStonePoints();
+		
 		var $han = $("div.han > label",$player);
 		if ($("b",$han).length == 0) {
 			$han.append($("<b>").html(me.game.status.han.user.nickname));
@@ -1051,9 +1053,9 @@ me.game = {
 			$("i",$han).html(me.game.status.han.data.win + "승 " + me.game.status.han.data.lose + "패");
 		}
 		if ($("small",$han).length == 0) {
-			$han.append($("<small>").html("기물점수 : <u>74</u>점</small>"));
+			$han.append($("<small>").html("기물점수 : <u>" + points.han + "</u>점</small>"));
 		} else {
-			$("small",$han).html("기물점수 : <u>74</u>점</small>");
+			$("small",$han).html("기물점수 : <u>" + points.han + "</u>점</small>");
 		}
 		
 		var $cho = $("div.cho > label",$player);
@@ -1068,9 +1070,9 @@ me.game = {
 			$("i",$cho).html(me.game.status.cho.data.win + "승 " + me.game.status.cho.data.lose + "패");
 		}
 		if ($("small",$cho).length == 0) {
-			$cho.append($("<small>").html("기물점수 : <u>74</u>점</small>"));
+			$cho.append($("<small>").html("기물점수 : <u>" + points.cho + "</u>점</small>"));
 		} else {
-			$("small",$cho).html("기물점수 : <u>74</u>점</small>");
+			$("small",$cho).html("기물점수 : <u>" + points.cho + "</u>점</small>");
 		}
 	},
 	/**
@@ -1264,6 +1266,28 @@ me.game = {
 				}
 			}
 		}
+	},
+	/**
+	 * 기물점수를 갱신한다.
+	 */
+	getStonePoints:function() {
+		var stonePoints = {"cha":13,"po":7,"ma":5,"sang":3,"sa":3,"king":2,"jol":2};
+		var points = {han:0,cho:0};
+		
+		if (me.game.step >= 10) {
+			for (var x=0;x<9;x++) {
+				for (var y=0;y<10;y++) {
+					var stone = me.game.status.stones[x][y];
+					if (stone == null) continue;
+					
+					points[stone.team]+= stonePoints[stone.type];
+				}
+			}
+			
+			points.cho = points.cho + 1.5;
+		}
+		
+		return points;
 	},
 	/**
 	 * 기물을 선택한다.
