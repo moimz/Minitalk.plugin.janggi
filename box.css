@@ -6,8 +6,8 @@
  * @file /plugins/janggi/box.css
  * @author Arzz (arzz@arzz.com)
  * @license MIT License
- * @version 1.0.0
- * @modified 2021. 2. 5.
+ * @version 2.0.0
+ * @modified 2021. 9. 27.
  */
 body {background:#474440; overflow:hidden;}
 div[data-role=janggi] {border:1px solid #25221f; margin:-1px; width:1100px; height:700px; position:absolute; top:calc(50% - 350px); left:calc(50% - 550px); font-size:0;}
@@ -266,78 +266,78 @@ div[data-role=frame] > footer > div[data-role=layers] {display:none;}
  * 채팅섹션
  * 채팅섹션의 경우, 푸터영역의 기본크기만큼 높이를 줄여준다.
  */
-div[data-role=frame] > main > section[data-role=chat] {height:calc(100% - 40px);}
-div[data-role=frame] > main > section[data-role=chat] > div[data-role] > div[data-role=photo] {float:left; width:34px; height:34px; margin-right:6px; background-image:url(./images/nophoto.png); background-repeat:no-repeat; background-size:cover; background-position:50% 50%; border-radius:50%; box-sizing:border-box; border:1px solid #999;}
-div[data-role=frame] > main > section[data-role=chat] > div[data-role] > div[data-role=nickname] {float:left; width:calc(100% - 50px); height:20px; font-size:12px; font-weight:bold; height:20px; line-height:16px; overflow:hidden; white-space:nowrap; text-overflow:ellipsis;}
-div[data-role=frame] > main > section[data-role=chat] > div[data-role] > div[data-role=nickname] > label[data-role=user] > span > i.me {color:#999;}
-div[data-role=frame] > main > section[data-role=chat] > button[data-action=history] {display:block; width:calc(100% - 10px); height:30px; margin:5px; border:1px solid #666; color:#fff; background:#777; cursor:pointer; font-size:12px;}
+div[data-role=frame] > main > section[data-section=chat] {height:calc(100% - 40px);}
+div[data-role=frame] > main > section[data-section=chat] > div[data-role] > div[data-role=photo] {float:left; width:34px; height:34px; margin-right:6px; background-image:url(./images/nophoto.png); background-repeat:no-repeat; background-size:cover; background-position:50% 50%; border-radius:50%; box-sizing:border-box; border:1px solid #999;}
+div[data-role=frame] > main > section[data-section=chat] > div[data-role] > div[data-role=nickname] {float:left; width:calc(100% - 50px); height:20px; font-size:12px; font-weight:bold; height:20px; line-height:16px; overflow:hidden; white-space:nowrap; text-overflow:ellipsis;}
+div[data-role=frame] > main > section[data-section=chat] > div[data-role] > div[data-role=nickname] > label[data-role=user] > span > i.me {color:#999;}
+div[data-role=frame] > main > section[data-section=chat] > button[data-action=history] {display:block; width:calc(100% - 10px); height:30px; margin:5px; border:1px solid #666; color:#fff; background:#777; cursor:pointer; font-size:12px;}
 
 /**
  * 시스템메시지
  */
-div[data-role=frame] > main > section[data-role=chat] > div[data-role=item] {margin:5px; -ms-word-break:break-all; word-wrap:break-word; -ms-user-select:auto; -moz-user-select:auto; -webkit-user-select:auto;}
-div[data-role=frame] > main > section[data-role=chat] > div[data-role=item].system {padding:5px; font-size:12px; line-height:1.4; text-align:justify;}
-div[data-role=frame] > main > section[data-role=chat] > div[data-role=item].system.info {border:1px solid #18295b; background:#2847a0; color:#fff;}
-div[data-role=frame] > main > section[data-role=chat] > div[data-role=item].system.action {border:1px solid #236a1f; background:#308f2b; color:#fff;}
-div[data-role=frame] > main > section[data-role=chat] > div[data-role=item].system.error {border:1px solid #b82332; background:#d33948; color:#fff;}
-div[data-role=frame] > main > section[data-role=chat] > div[data-role=item].system.user {color:#666; margin:0px; padding:2px 5px;}
-div[data-role=frame] > main > section[data-role=chat] > div[data-role=item].system.plugin {background:#DA81F5; color:#fff;}
+div[data-role=frame] > main > section[data-section=chat] > div[data-role=item] {margin:5px; -ms-word-break:break-all; word-wrap:break-word; -ms-user-select:auto; -moz-user-select:auto; -webkit-user-select:auto;}
+div[data-role=frame] > main > section[data-section=chat] > div[data-role=item].system {padding:5px; font-size:12px; line-height:1.4; text-align:justify;}
+div[data-role=frame] > main > section[data-section=chat] > div[data-role=item].system.info {border:1px solid #18295b; background:#2847a0; color:#fff;}
+div[data-role=frame] > main > section[data-section=chat] > div[data-role=item].system.action {border:1px solid #236a1f; background:#308f2b; color:#fff;}
+div[data-role=frame] > main > section[data-section=chat] > div[data-role=item].system.error {border:1px solid #b82332; background:#d33948; color:#fff;}
+div[data-role=frame] > main > section[data-section=chat] > div[data-role=item].system.user {color:#666; margin:0px; padding:2px 5px;}
+div[data-role=frame] > main > section[data-section=chat] > div[data-role=item].system.plugin {background:#DA81F5; color:#fff;}
 
 /**
  * 채팅메시지
  */
-div[data-role=frame] > main > section[data-role=chat] > div[data-role=message] {margin:5px;}
-div[data-role=frame] > main > section[data-role=chat] > div[data-role=message]:after {clear:both; content:""; display:block;}
-div[data-role=frame] > main > section[data-role=chat] > div[data-role=message].whisper {color:#ff00ff;}
-div[data-role=frame] > main > section[data-role=chat] > div[data-role=message].log {opacity:0.5;}
-div[data-role=frame] > main > section[data-role=chat] > div[data-role=message] > div[data-role=context] {float:left; width:calc(100% - 50px); box-sizing:border-box;}
-div[data-role=frame] > main > section[data-role=chat] > div[data-role=message] > div[data-role=context] > div > div[data-role=balloon] {margin:0px; font-size:12px; color:#ea952f; line-height:1.6;}
-div[data-role=frame] > main > section[data-role=chat] > div[data-role=message] > div[data-role=context] > div > div[data-role=balloon] > span.text > a {text-decoration:none; color:#2196F3;}
-div[data-role=frame] > main > section[data-role=chat] > div[data-role=message] > div[data-role=context] > div > div[data-role=balloon] > span.text > a:hover {text-decoration:underline;}
-div[data-role=frame] > main > section[data-role=chat] > div[data-role=message] > div[data-role=context] > div > div[data-role=balloon] > span.text:after {content:"-"; color:#222;}
-div[data-role=frame] > main > section[data-role=chat] > div[data-role=message] > div[data-role=context] > div > div[data-role=balloon] > span.time {color:#999; white-space:nowrap;}
-div[data-role=frame] > main > section[data-role=chat] > div[data-role=message] > div[data-role=context] > div > div[data-role=balloon] > span.time > time {display:none; font-size:10px;}
-div[data-role=frame] > main > section[data-role=chat] > div[data-role=message] > div[data-role=context] > div > div[data-role=balloon] > span.time > time:before {content:"(";}
-div[data-role=frame] > main > section[data-role=chat] > div[data-role=message] > div[data-role=context] > div > div[data-role=balloon] > span.time > time:after {content:")";}
-div[data-role=frame] > main > section[data-role=chat] > div[data-role=message] > div[data-role=context] > div > div[data-role=balloon] > span.time > i.sending {color:#999; font-family:moimz; font-size:10px; font-style:normal;}
-div[data-role=frame] > main > section[data-role=chat] > div[data-role=message] > div[data-role=context] > div > div[data-role=balloon] > span.time > i.sending:before {content:"\ef17";}
-div[data-role=frame] > main > section[data-role=chat] > div[data-role=message] > div[data-role=context] > div > div[data-role=balloon] > span.time > i.fail {color:#F44336; font-family:moimz; font-size:10px; font-style:normal;}
-div[data-role=frame] > main > section[data-role=chat] > div[data-role=message] > div[data-role=context] > div > div[data-role=balloon] > span.time > i.fail:before {content:"\eb02";}
-div[data-role=frame] > main > section[data-role=chat] > div[data-role=message] > div[data-role=context] > div:last-child > div > span.time > time {display:inline-block;}
-div[data-role=frame] > main > section[data-role=chat] > div[data-role=message].whisper > div[data-role=context] > div > div[data-role=balloon] {color:#ff00ff;}
-div[data-role=frame] > main > section[data-role=chat] > div[data-role=message] > div[data-role=context] > div > div[data-role=file] {padding:5px 0px; max-width:300px;}
-div[data-role=frame] > main > section[data-role=chat] > div[data-role=message] > div[data-role=context] > div > div[data-role=file] > a {border:1px solid #444; color:#999; text-decoration:none; font-size:0;}
-div[data-role=frame] > main > section[data-role=chat] > div[data-role=message] > div[data-role=context] > div > div[data-role=file] > a > i {display:block; float:left; width:30px; height:30px; margin:10px; vertical-align:middle;}
-div[data-role=frame] > main > section[data-role=chat] > div[data-role=message] > div[data-role=context] > div > div[data-role=file] > a > b {display:block; width:calc(100% - 60px); height:20px; line-height:20px; font-size:12px; color:#eee; margin:5px 10px 0px 0px; overflow:hidden; white-space:nowrap; text-overflow:ellipsis;}
-div[data-role=frame] > main > section[data-role=chat] > div[data-role=message] > div[data-role=context] > div > div[data-role=file] > a > p {display:block; width:calc(100% - 60px); height:20px; line-height:20px; font-size:12px; color:#999; margin:0px 10px 5px 0px; overflow:hidden; white-space:nowrap; text-overflow:ellipsis;}
-div[data-role=frame] > main > section[data-role=chat] > div[data-role=message] > div[data-role=context] > div > div[data-role=website] {padding:5px 0px; max-width:300px;}
-div[data-role=frame] > main > section[data-role=chat] > div[data-role=message] > div[data-role=context] > div > div[data-role=website] > a {border:1px solid #444; color:#222; text-decoration:none;}
-div[data-role=frame] > main > section[data-role=chat] > div[data-role=message] > div[data-role=context] > div > div[data-role=website] > a > h4 {box-sizing:border-box; width:100%; padding:8px 8px 5px 8px; white-space:nowrap; text-overflow:ellipsis; overflow:hidden; font-size:12px; color:#eee;}
-div[data-role=frame] > main > section[data-role=chat] > div[data-role=message] > div[data-role=context] > div > div[data-role=website] > a > p {display:-webkit-box; padding:0px 8px 8px 8px; line-height:20px; min-height:20px; max-height:40px; overflow:hidden; white-space:normal; -webkit-line-clamp:2; text-overflow:ellipsis; -webkit-box-orient:vertical; color:#999; font-size:12px;}
+div[data-role=frame] > main > section[data-section=chat] > div[data-role=message] {margin:5px;}
+div[data-role=frame] > main > section[data-section=chat] > div[data-role=message]:after {clear:both; content:""; display:block;}
+div[data-role=frame] > main > section[data-section=chat] > div[data-role=message].whisper {color:#ff00ff;}
+div[data-role=frame] > main > section[data-section=chat] > div[data-role=message].log {opacity:0.5;}
+div[data-role=frame] > main > section[data-section=chat] > div[data-role=message] > div[data-role=context] {float:left; width:calc(100% - 50px); box-sizing:border-box;}
+div[data-role=frame] > main > section[data-section=chat] > div[data-role=message] > div[data-role=context] > div > div[data-role=balloon] {margin:0px; font-size:12px; color:#ea952f; line-height:1.6;}
+div[data-role=frame] > main > section[data-section=chat] > div[data-role=message] > div[data-role=context] > div > div[data-role=balloon] > span.text > a {text-decoration:none; color:#2196F3;}
+div[data-role=frame] > main > section[data-section=chat] > div[data-role=message] > div[data-role=context] > div > div[data-role=balloon] > span.text > a:hover {text-decoration:underline;}
+div[data-role=frame] > main > section[data-section=chat] > div[data-role=message] > div[data-role=context] > div > div[data-role=balloon] > span.text:after {content:"-"; color:#222;}
+div[data-role=frame] > main > section[data-section=chat] > div[data-role=message] > div[data-role=context] > div > div[data-role=balloon] > span.time {color:#999; white-space:nowrap;}
+div[data-role=frame] > main > section[data-section=chat] > div[data-role=message] > div[data-role=context] > div > div[data-role=balloon] > span.time > time {display:none; font-size:10px;}
+div[data-role=frame] > main > section[data-section=chat] > div[data-role=message] > div[data-role=context] > div > div[data-role=balloon] > span.time > time:before {content:"(";}
+div[data-role=frame] > main > section[data-section=chat] > div[data-role=message] > div[data-role=context] > div > div[data-role=balloon] > span.time > time:after {content:")";}
+div[data-role=frame] > main > section[data-section=chat] > div[data-role=message] > div[data-role=context] > div > div[data-role=balloon] > span.time > i.sending {color:#999; font-family:moimz; font-size:10px; font-style:normal;}
+div[data-role=frame] > main > section[data-section=chat] > div[data-role=message] > div[data-role=context] > div > div[data-role=balloon] > span.time > i.sending:before {content:"\ef17";}
+div[data-role=frame] > main > section[data-section=chat] > div[data-role=message] > div[data-role=context] > div > div[data-role=balloon] > span.time > i.fail {color:#F44336; font-family:moimz; font-size:10px; font-style:normal;}
+div[data-role=frame] > main > section[data-section=chat] > div[data-role=message] > div[data-role=context] > div > div[data-role=balloon] > span.time > i.fail:before {content:"\eb02";}
+div[data-role=frame] > main > section[data-section=chat] > div[data-role=message] > div[data-role=context] > div:last-child > div > span.time > time {display:inline-block;}
+div[data-role=frame] > main > section[data-section=chat] > div[data-role=message].whisper > div[data-role=context] > div > div[data-role=balloon] {color:#ff00ff;}
+div[data-role=frame] > main > section[data-section=chat] > div[data-role=message] > div[data-role=context] > div > div[data-role=file] {padding:5px 0px; max-width:300px;}
+div[data-role=frame] > main > section[data-section=chat] > div[data-role=message] > div[data-role=context] > div > div[data-role=file] > a {border:1px solid #444; color:#999; text-decoration:none; font-size:0;}
+div[data-role=frame] > main > section[data-section=chat] > div[data-role=message] > div[data-role=context] > div > div[data-role=file] > a > i {display:block; float:left; width:30px; height:30px; margin:10px; vertical-align:middle;}
+div[data-role=frame] > main > section[data-section=chat] > div[data-role=message] > div[data-role=context] > div > div[data-role=file] > a > b {display:block; width:calc(100% - 60px); height:20px; line-height:20px; font-size:12px; color:#eee; margin:5px 10px 0px 0px; overflow:hidden; white-space:nowrap; text-overflow:ellipsis;}
+div[data-role=frame] > main > section[data-section=chat] > div[data-role=message] > div[data-role=context] > div > div[data-role=file] > a > p {display:block; width:calc(100% - 60px); height:20px; line-height:20px; font-size:12px; color:#999; margin:0px 10px 5px 0px; overflow:hidden; white-space:nowrap; text-overflow:ellipsis;}
+div[data-role=frame] > main > section[data-section=chat] > div[data-role=message] > div[data-role=context] > div > div[data-role=website] {padding:5px 0px; max-width:300px;}
+div[data-role=frame] > main > section[data-section=chat] > div[data-role=message] > div[data-role=context] > div > div[data-role=website] > a {border:1px solid #444; color:#222; text-decoration:none;}
+div[data-role=frame] > main > section[data-section=chat] > div[data-role=message] > div[data-role=context] > div > div[data-role=website] > a > h4 {box-sizing:border-box; width:100%; padding:8px 8px 5px 8px; white-space:nowrap; text-overflow:ellipsis; overflow:hidden; font-size:12px; color:#eee;}
+div[data-role=frame] > main > section[data-section=chat] > div[data-role=message] > div[data-role=context] > div > div[data-role=website] > a > p {display:-webkit-box; padding:0px 8px 8px 8px; line-height:20px; min-height:20px; max-height:40px; overflow:hidden; white-space:normal; -webkit-line-clamp:2; text-overflow:ellipsis; -webkit-box-orient:vertical; color:#999; font-size:12px;}
 
 /**
  * 유저메시지
  */
-div[data-role=frame] > main > section[data-role=chat] > div[data-role=user] {margin:5px;}
-div[data-role=frame] > main > section[data-role=chat] > div[data-role=user]:after {clear:both; content:""; display:block;}
-div[data-role=frame] > main > section[data-role=chat] > div[data-role=user] > div.box {float:left; width:calc(100% - 50px); box-sizing:border-box;}
-div[data-role=frame] > main > section[data-role=chat] > div[data-role=user] > div.box > div > div {margin:0px; font-size:12px; line-height:1.6;}
-div[data-role=frame] > main > section[data-role=chat] > div[data-role=user].join {color:#3efeff; opacity:0.7;}
-div[data-role=frame] > main > section[data-role=chat] > div[data-role=user].leave {color:#fff; opacity:0.5;}
-div[data-role=frame] > main > section[data-role=chat] > div[data-role=user].update {color:#3efeff;}
-div[data-role=frame] > main > section[data-role=chat] > div[data-role=line] {border-top:1px dotted #858484; margin:10px 5px 5px 5px; height:10px; position:relative;}
-div[data-role=frame] > main > section[data-role=chat] > div[data-role=line] > div {width:120px; height:12px; line-height:12px; background:#46443f; position:absolute; top:-6px; left:calc(50% - 50px); text-align:center; color:#999; font-size:11px;}
+div[data-role=frame] > main > section[data-section=chat] > div[data-role=user] {margin:5px;}
+div[data-role=frame] > main > section[data-section=chat] > div[data-role=user]:after {clear:both; content:""; display:block;}
+div[data-role=frame] > main > section[data-section=chat] > div[data-role=user] > div.box {float:left; width:calc(100% - 50px); box-sizing:border-box;}
+div[data-role=frame] > main > section[data-section=chat] > div[data-role=user] > div.box > div > div {margin:0px; font-size:12px; line-height:1.6;}
+div[data-role=frame] > main > section[data-section=chat] > div[data-role=user].join {color:#3efeff; opacity:0.7;}
+div[data-role=frame] > main > section[data-section=chat] > div[data-role=user].leave {color:#fff; opacity:0.5;}
+div[data-role=frame] > main > section[data-section=chat] > div[data-role=user].update {color:#3efeff;}
+div[data-role=frame] > main > section[data-section=chat] > div[data-role=line] {border-top:1px dotted #858484; margin:10px 5px 5px 5px; height:10px; position:relative;}
+div[data-role=frame] > main > section[data-section=chat] > div[data-role=line] > div {width:120px; height:12px; line-height:12px; background:#46443f; position:absolute; top:-6px; left:calc(50% - 50px); text-align:center; color:#999; font-size:11px;}
 
 
 /**
  * 유저섹션
  */
-div[data-role=frame] > main > section[data-role=users] {display:none;}
+div[data-role=frame] > main > section[data-section=users] {display:none;}
 
 /**
  * 유저섹션 (v6)
  */
-div[data-role=frame][data-users=TRUE] > main > section[data-role=users] {display:none;}
+div[data-role=frame][data-users=TRUE] > main > section[data-section=users] {display:none;}
 
 
 /**
@@ -367,19 +367,19 @@ label[data-role=user] > span > i.admin:after {content:"";}
 /**
  * 섹션 공통
  */
-section[data-role] > h2 {background:#173435; color:#fff;}
-section[data-role] > button[data-action=close] {color:#fff; background:transparent;}
-section[data-role] > button[data-action=close]:before {content:"\eb03";}
-section[data-role] > div[data-role=content] {background:#222;}
-section[data-role] > div[data-role=content] > h4 {color:#fff;}
-section[data-role] > div[data-role=content] > label {color:#fff;}
-section[data-role] > div[data-role=content] > label.checkbox {}
-section[data-role] > div[data-role=content] > label > input {border:1px solid #1a1a1a; background-color:#343434; color:#fff;}
-section[data-role] > div[data-role=content] > label > select {border:1px solid #1a1a1a; background-color:#343434; color:#fff;}
-section[data-role] > div[data-role=content] > label > input[type=checkbox]:after {border:1px solid #ccc;}
-section[data-role] > div[data-role=content] > label > input[type=checkbox]:checked:after {border-color:#1e71b3; background:#1e71b3; color:#fff;}
-section[data-role] > div[data-role=content] > label > p {color:#fff;}
-section[data-role] > div[data-role=content] > hr {border-top:1px solid #444;}
-section[data-role] > div[data-role=button] {background:#fff;}
-section[data-role] > div[data-role=button] > ul > li > button {background:#666; color:#fff; border-top:1px solid #656565;}
-section[data-role] > div[data-role=button] > ul > li > button[data-action=confirm] {background:#1e71b3; color:#fff; border-top-color:#1e71b3;}
+section[data-section] > h2 {background:#173435; color:#fff;}
+section[data-section] > button[data-action=close] {color:#fff; background:transparent;}
+section[data-section] > button[data-action=close]:before {content:"\eb03";}
+section[data-section] > div[data-role=content] {background:#222;}
+section[data-section] > div[data-role=content] > h4 {color:#fff;}
+section[data-section] > div[data-role=content] > label {color:#fff;}
+section[data-section] > div[data-role=content] > label.checkbox {}
+section[data-section] > div[data-role=content] > label > input {border:1px solid #1a1a1a; background-color:#343434; color:#fff;}
+section[data-section] > div[data-role=content] > label > select {border:1px solid #1a1a1a; background-color:#343434; color:#fff;}
+section[data-section] > div[data-role=content] > label > input[type=checkbox]:after {border:1px solid #ccc;}
+section[data-section] > div[data-role=content] > label > input[type=checkbox]:checked:after {border-color:#1e71b3; background:#1e71b3; color:#fff;}
+section[data-section] > div[data-role=content] > label > p {color:#fff;}
+section[data-section] > div[data-role=content] > hr {border-top:1px solid #444;}
+section[data-section] > div[data-role=button] {background:#fff;}
+section[data-section] > div[data-role=button] > ul > li > button {background:#666; color:#fff; border-top:1px solid #656565;}
+section[data-section] > div[data-role=button] > ul > li > button[data-action=confirm] {background:#1e71b3; color:#fff; border-top-color:#1e71b3;}

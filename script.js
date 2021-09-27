@@ -6,8 +6,8 @@
  * @file /plugins/janggi/script.js
  * @author Arzz (arzz@arzz.com)
  * @license MIT License
- * @version 1.0.0
- * @modified 2021. 2. 5.
+ * @version 2.0.0
+ * @modified 2021. 9. 27.
  */
 if (Minitalk === undefined) return;
 
